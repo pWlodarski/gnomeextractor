@@ -34,21 +34,13 @@ UsePreviousTasks=yes
 
 [Languages]
 Name: english; MessagesFile: compiler:Default.isl
-Name: russian; MessagesFile: compiler:Languages\Russian.isl
 
 [CustomMessages]
-russian.Cheats =Чит-версия
-russian.NoCheats =No-cheat версия
-russian.Custom =Выборочная
-russian.Full =Полная
-russian.Default =По-умолчанию
 english.Cheats =Cheat version
 english.NoCheats =No-Cheat version
 english.Custom =Custom
 english.Full =Full
 english.Default =Default
-russian.InstallRussian=Установить русский язык
-english.InstallRussian=Install russian language
 
 [Tasks]
 Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
@@ -59,14 +51,12 @@ Source: ..\bin\Debug\GnomeExtractor.exe; DestDir: {app}; Flags: ignoreversion
 Source: ..\bin\Debug\NLog.dll; DestDir: {app}; Flags: ignoreversion
 Source: ..\bin\Debug\NLog.config; DestDir: {app}; Flags: ignoreversion
 Source: ..\Readme\Readme.txt; DestDir: {app}; Languages: english; Flags: ignoreversion isreadme
-Source: ..\Readme\Прочти меня.txt; DestDir: {app}; Languages: russian; Flags: ignoreversion isreadme
 ; first settings.xml file with IsCheatsEnabled == true
 Source: ..\bin\Debug\cheats\settings.xml; DestDir: {userappdata}\Gnome Extractor; Flags: ignoreversion; Components: cheats
 ; second settings.xml file with IsCheatsEnabled == false
 Source: ..\bin\Debug\settings.xml; DestDir: {userappdata}\Gnome Extractor; Flags: ignoreversion; Components: nocheats
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 Source: ..\Languages\english.xml; DestDir: {app}\Languages; DestName: english.xml; Flags: ignoreversion
-Source: ..\Languages\russian.xml; DestDir: {app}\Languages; DestName: russian.xml; Flags: ignoreversion; Components: installRussian
 
 [Icons]
 Name: {group}\{#MyAppName}; Filename: {app}\{#MyAppExeName}
@@ -81,7 +71,6 @@ Filename: {app}\{#MyAppExeName}; Description: {cm:LaunchProgram,{#StringChange(M
 [Components]
 Name: nocheats; Description: {cm:NoCheats}; Flags: exclusive disablenouninstallwarning
 Name: cheats; Description: {cm:Cheats}; Flags: exclusive disablenouninstallwarning
-Name: installRussian; Description: {cm:InstallRussian}; Types: default; Flags: disablenouninstallwarning
 
 [Types]
 Name: default; Description: {cm:Default}; Languages: 
@@ -91,11 +80,7 @@ Name: custom; Description: {cm:Custom}; Flags: iscustom
 Name: {app}\error.log; Type: files
 
 [InstallDelete]
-Name: {app}\Readme_rus_GnomeExtractor_0_1.txt; Type: files
 Name: {app}\Readme_eng_GnomeExtractor_0_1.txt; Type: files
 Name: {app}\en-US\*; Type: filesandordirs
-Name: {app}\Readme_rus_GnomeExtractor_0_3.txt; Type: files
 Name: {app}\Readme_eng_GnomeExtractor_0_3.txt; Type: files
 Name: {app}\en-US\; Type: dirifempty
-Name: {app}\ru-RU\; Type: dirifempty
-Name: {app}\ru-RU\*; Type: filesandordirs

@@ -72,7 +72,6 @@ namespace GnomeExtractor
 
             //UpdateLanguageMenus();
 
-            // Загружаем настроечки с прошлого запуска
             // Loading settings
             this.WindowState = settings.Fields.LastRunWindowState;
             this.Left = settings.Fields.LastRunLocation.X;
@@ -87,7 +86,10 @@ namespace GnomeExtractor
             Globals.Logger.Debug("Settings have been loaded");
             Globals.Logger.Debug("Game initialization...");
             typeof(GnomanEmpire).GetMethod("Initialize", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(GnomanEmpire.Instance, null);
-            if (GnomanEmpire.Instance.Graphics.IsFullScreen) GnomanEmpire.Instance.Graphics.ToggleFullScreen();
+            if (GnomanEmpire.Instance.Graphics.IsFullScreen)
+            {
+                GnomanEmpire.Instance.Graphics.ToggleFullScreen();
+            }
             GnomanEmpire.Instance.AudioManager.MusicVolume = 0;
             Globals.Logger.Debug("Game initialized");
 
@@ -95,7 +97,10 @@ namespace GnomeExtractor
 
             DataContext = Globals.ViewModel;
 
-            if (settings.Fields.IsAutoUpdateEnabled) CheckingUpdates(false);
+            if (settings.Fields.IsAutoUpdateEnabled)
+            {
+                CheckingUpdates(false);
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -774,5 +779,10 @@ namespace GnomeExtractor
             professionsListBox.ItemsSource = Globals.ViewModel.Skills;
         }
         #endregion
+
+        private void dataGridProfessions_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
