@@ -128,7 +128,7 @@
                     </Grid.ColumnDefinitions>
                     <GroupBox Grid.Column="0" Grid.ColumnSpan="1" Header="{Binding Language.Skills}">
                         <DataGrid Name="dataGridProfessions" AutoGenerateColumns="False" Sorting="DataGrid_Sorting" 
-                                  CellEditEnding="DataGrid_CellEditEnding" ItemsSource="{Binding Gnomes}">
+                                  CellEditEnding="DataGrid_CellEditEnding" ItemsSource="{Binding Gnomes}" SelectionChanged="dataGridProfessions_SelectionChanged">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding ID}" MaxWidth="0.01">
                                     <DataGridTextColumn.CellStyle>

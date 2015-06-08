@@ -79,11 +79,11 @@
   <ItemGroup>
     <Reference Include="Gnomoria, Version=0.8.13.1, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Gnomoria.exe</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Gnomoria\Gnomoria.exe</HintPath>
     </Reference>
     <Reference Include="gnomorialib, Version=0.8.13.1, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\gnomorialib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Gnomoria\gnomorialib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -98,7 +98,8 @@
     </Reference>
     <Reference Include="SevenZipSharp, Version=0.64.4510.27485, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SevenZipSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Gnomoria\SevenZipSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -170,9 +171,6 @@
     <Resource Include="Resources\open.png" />
     <Resource Include="Resources\remove.png" />
     <Resource Include="Resources\save.png" />
-    <None Include="Languages\russian.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <Resource Include="Languages\english.xml" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -189,7 +187,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Loc.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Loc.ru-Ru.resx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -221,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Readme\Readme.txt" />
-    <Resource Include="Readme\Прочти меня.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Installer\Multi-Lang Installer.iss" />
